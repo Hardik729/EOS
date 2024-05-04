@@ -1,0 +1,78 @@
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ rm -r /home/parimal/Desktop/Practice/one/two/four/five
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ rm -r /home/parimal/Desktop/Practice/one/two/four
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ cat > data.txt
+Linux is open source
+
+in linux everything is File
+
+Files have permissions.
+
+Files have inode no.
+
+Files have size.
+
+there are several types of file.hardik@hardik-Legion-5:~/Desktop/Practice/one$ wc data.txt
+ 10  25 148 data.txt
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep data.txt
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "files" data.txt
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep files *
+grep: two: Is a directory
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "files" *
+grep: two: Is a directory
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "LINUX" *
+grep: two: Is a directory
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "file" *
+data.txt:there are several types of file.
+grep: two: Is a directory
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "files" data.txt
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep -v "files" data.txt
+Linux is open source
+
+in linux everything is File
+
+Files have permissions.
+
+Files have inode no.
+
+Files have size.
+
+there are several types of file.
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ tail -n 3 data.txt
+Files have size.
+
+there are several types of file.hardik@hardik-Legion-5:~/Desktop/Practice/one$ tail^C
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ head -n 2 data.txt
+Linux is open source
+
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ head -n 5 data.txt | tail -n 3
+in linux everything is File
+
+Files have permissions.
+hardik@hardik-Legion-5:~/Deshardik@hardik-Legion-5:~/Deshardik@hardik-Legion-5:~/Desktop/Practice/one$ g                             ^C
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "\.$" data.txt
+Files have permissions.
+Files have inode no.
+Files have size.
+there are several types of file.
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "f" data.txt
+there are several types of file.
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep"^f" data.txt
+grep^f: command not found
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "have" data.txt
+Files have permissions.
+Files have inode no.
+Files have size.
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "files" data.txt
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep "file" data.txt
+there are several types of file.
+hardik@hardik-Legion-5:~/Desktop/Practice/one$ grep -v "files" data.txt
+Linux is open source
+
+in linux everything is File
+
+Files have permissions.
+
+Files have inode no.
+
+Files have size.
+
