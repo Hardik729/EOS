@@ -1,0 +1,274 @@
+hardik@hardik-Legion-5:~$ ls
+Arduino                                 num.txt
+CDAC_Assignments                        OTHERS
+C_Preparatory_Assignments               output.txt
+Day07asm.zip                            Parimal.txt
+Desktop                                 Pictures
+Documents                               Public
+Downloads                               Python_Codes
+ecp                                     qemu_emulator
+Eddy                                    snap
+EOS                                     sorted.txt
+error.txt                               STM32Cube
+google-chrome-stable_current_amd64.deb  STM32CubeIDE
+input.txt                               Templates
+IoT                                     Videos
+MCPI_Assignments                        Waghmare.txt
+Music
+hardik@hardik-Legion-5:~$ cd Desktop/
+hardik@hardik-Legion-5:~/Desktop$ ls
+ EOS_DAY_02  'GIT Data'   IoT_EXAM.zip   PPT_PDF
+ EOS_DAY_03   IoT_EXAM    LabExam        weather_data.csv
+hardik@hardik-Legion-5:~/Desktop$ cd PPT_PDF
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ rename 's/\.pdf$\.txt/' *.txt
+Substitution replacement not terminated at line 1, in:
+s/\.pdf$\.txt/
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ rename 's/\.pdf$/\.txt/' *.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ls
+'ARM 01.pdf'   day01.pdf   day02.pdf   day03.pdf   day04.pdf   day05.pdf   day06.pdf   PDFs   PPTs   taste.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ rename 's/\.pdf$/\.txt/' *.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ls
+'ARM 01.pdf'   day01.pdf   day02.pdf   day03.pdf   day04.pdf   day05.pdf   day06.pdf   PDFs   PPTs   taste.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ rename 's/\.pdf/\.txt/' *.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ rename 's/\.pdf/\.txt/' *.pdf
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ rename 's/\.txt$/\.htm/' *.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ln -s
+ln: missing file operand
+Try 'ln --help' for more information.
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ln --help
+Usage: ln [OPTION]... [-T] TARGET LINK_NAME
+  or:  ln [OPTION]... TARGET
+  or:  ln [OPTION]... TARGET... DIRECTORY
+  or:  ln [OPTION]... -t DIRECTORY TARGET...
+In the 1st form, create a link to TARGET with the name LINK_NAME.
+In the 2nd form, create a link to TARGET in the current directory.
+In the 3rd and 4th forms, create links to each TARGET in DIRECTORY.
+Create hard links by default, symbolic links with --symbolic.
+By default, each destination (name of new link) should not already exist.
+When creating hard links, each TARGET must exist.  Symbolic links
+can hold arbitrary text; if later resolved, a relative link is
+interpreted in relation to its parent directory.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]      make a backup of each existing destination file
+  -b                          like --backup but does not accept an argument
+  -d, -F, --directory         allow the superuser to attempt to hard link
+                                directories (note: will probably fail due to
+                                system restrictions, even for the superuser)
+  -f, --force                 remove existing destination files
+  -i, --interactive           prompt whether to remove destinations
+  -L, --logical               dereference TARGETs that are symbolic links
+  -n, --no-dereference        treat LINK_NAME as a normal file if
+                                it is a symbolic link to a directory
+  -P, --physical              make hard links directly to symbolic links
+  -r, --relative              create symbolic links relative to link location
+  -s, --symbolic              make symbolic links instead of hard links
+  -S, --suffix=SUFFIX         override the usual backup suffix
+  -t, --target-directory=DIRECTORY  specify the DIRECTORY in which to create
+                                the links
+  -T, --no-target-directory   treat LINK_NAME as a normal file always
+  -v, --verbose               print name of each linked file
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+Using -s ignores -L and -P.  Otherwise, the last option specified controls
+behavior when a TARGET is a symbolic link, defaulting to -P.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/ln>
+or available locally via: info '(coreutils) ln invocation'
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ln -s /home/hardik/Desktop/PPT_PDF/day01.htm /home/hardik/Desktop/day01.htm
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ln /home/hardik/Desktop/PPT_PDF/day02.htm /home/hardik/Desktop/day02.htm
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ stat
+stat: missing operand
+Try 'stat --help' for more information.
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ stat day01.htm
+  File: day01.htm
+  Size: 59012     	Blocks: 120        IO Block: 4096   regular file
+Device: 10308h/66312d	Inode: 5416636     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/  hardik)   Gid: ( 1000/  hardik)
+Access: 2024-05-07 19:49:04.817373446 +0530
+Modify: 2024-03-25 17:12:49.352492000 +0530
+Change: 2024-05-07 19:49:03.493341585 +0530
+ Birth: 2024-05-07 18:37:31.523667208 +0530
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ touch -t 202405071959 day01.htm
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ stat day01.htm
+  File: day01.htm
+  Size: 59012     	Blocks: 120        IO Block: 4096   regular file
+Device: 10308h/66312d	Inode: 5416636     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/  hardik)   Gid: ( 1000/  hardik)
+Access: 2024-05-07 19:59:00.000000000 +0530
+Modify: 2024-05-07 19:59:00.000000000 +0530
+Change: 2024-05-07 19:57:22.726024865 +0530
+ Birth: 2024-05-07 18:37:31.523667208 +0530
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ touch test.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ cat test.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ cat > test.txt
+hi
+there
+how 
+are
+you
+I
+am         
+coming
+there
+wait       
+for
+me
+Bye 
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ cat test.txt
+hi
+there
+how
+are
+you
+I
+am
+coming
+there
+wait
+for
+me
+Bye
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ tail -n +5 test.txt
+you
+I
+am
+coming
+there
+wait
+for
+me
+Bye
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ whoami
+hardik
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ tty
+/dev/pts/0
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ who am i
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ whoami && tty
+hardik
+/dev/pts/0
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ users
+hardik
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ who
+hardik   :1           2024-05-07 12:22 (:1)
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ grep "coming" test.txt
+coming
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ egrep "coming" test.txt
+coming
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ egrep "coming | there" test.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ egrep "coming|there" test.txt
+there
+coming
+there
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ fgrep "Bye" test.txt
+Bye
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ chmod
+chmod: missing operand
+Try 'chmod --help' for more information.
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ chmod -r test.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ chmod -w test.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ chmod u+rwx test.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ cat test.txt | wc -w > output.txt
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ cat output.txt
+13
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ who | wc
+      1       5      44
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ who
+hardik   :1           2024-05-07 12:22 (:1)
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ head -n 5 | tail -n 10
+^[[A^[[D^C
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ head -n 5 taste.txt | tail -n 10
+head: cannot open 'taste.txt' for reading: No such file or directory
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ head -n 5 text.txt | tail -n 10
+head: cannot open 'text.txt' for reading: No such file or directory
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ head -n 5 test.txt | tail -n 10
+hi
+there
+how
+are
+you
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ head -n 10 test.txt | tail -n 5
+I
+am
+coming
+there
+wait
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ sort test.txt | uniq
+am
+are
+Bye
+coming
+for
+hi
+how
+I
+me
+there
+wait
+you
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ uniq test.txt
+hi
+there
+how
+are
+you
+I
+am
+coming
+there
+wait
+for
+me
+Bye
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ sort test.txt | uniq
+am
+are
+Bye
+coming
+for
+hi
+how
+I
+me
+there
+wait
+you
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ who | grep -v 'tty2\|tty3\|tty4'
+hardik   :1           2024-05-07 12:22 (:1)
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ tty
+/dev/pts/0
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ls -l | sort -k 5,5n
+total 1216
+-rw-rw-r-- 1 hardik hardik      3 May  7 21:27 output.txt
+-rw-rw-r-- 1 hardik hardik     51 May  7 18:53 taste.htm
+-rwx------ 1 hardik hardik     55 May  7 20:02 test.txt
+drwxrwxr-x 2 hardik hardik   4096 Apr 12 18:44 PPTs
+drwxrwxr-x 2 hardik hardik   4096 Apr 14 10:11 PDFs
+-rw-rw-r-- 1 hardik hardik  54003 Mar 28 16:06 day04.htm
+-rw-rw-r-- 1 hardik hardik  54777 Mar 27 14:29 day03.htm
+-rw-rw-r-- 1 hardik hardik  59012 May  7 19:59 day01.htm
+-rw-rw-r-- 1 hardik hardik  71281 Mar 30 14:03 day05.htm
+-rw-rw-r-- 1 hardik hardik  88539 May  7 18:45 day06.htm
+-rw-rw-r-- 2 hardik hardik 121234 Mar 27 14:29 day02.htm
+-rw-rw-r-- 1 hardik hardik 758054 May  7 18:46 ARM 01.htm
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ls -l | grep "^-" | wc -l
+10
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ls -l | grep "^d" | wc -l
+2
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ ls -a | grep '^\.'
+.
+..
+hardik@hardik-Legion-5:~/Desktop/PPT_PDF$ 
+
+
